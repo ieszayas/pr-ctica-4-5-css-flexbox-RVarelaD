@@ -1,0 +1,132 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    /* Asegura que el cuerpo ocupe toda la altura de la ventana */
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    border: 1px solid #ccc;
+    height: calc(100vh - 20px);
+    /* Asegura que el contenedor ocupe toda la altura de la ventana, menos el margen */
+}
+
+header,
+nav,
+article,
+aside,
+footer {
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin: 5px;
+}
+
+
+div {
+    background-color: rgba(128, 0, 128, 0.3); /* Fondo morado oscuro con algo de transparencia */
+    border: 2px solid #8a2be2; /* Borde neón morado */
+}
+
+
+header {
+    background-color: rgba(0, 255, 255, 0.5);
+    /* Fondo más claro (con algo de transparencia) */
+    border: 2px solid #00ffff;
+    /* Borde neón */
+}
+
+nav {
+    background-color: rgba(255, 0, 0, 0.3); /* Fondo rojizo con algo de transparencia */
+    border: 2px solid #ff0000; /* Borde neón rojo */
+}
+
+article {
+    background-color: rgba(0, 255, 0, 0.5);
+    /* Fondo más claro (con algo de transparencia) */
+    border: 2px solid #00ff00;
+    /* Borde neón */
+}
+
+aside {
+    background-color: rgba(0, 0, 128, 0.3); /* Fondo azul marino con algo de transparencia */
+    border: 2px solid #0000ff; /* Borde neón azul */
+}
+
+footer {
+    background-color: rgba(255, 127, 0, 0.5);
+    /* Fondo más claro (con algo de transparencia) */
+    border: 2px solid #ff7f00;
+    /* Borde neón */
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 640px) {
+    .header {
+        flex: 1 100%;
+        height: 10%;
+        /* Ocupa el 10% de la altura total */
+    }
+
+    .nav {
+        flex: 1 15%;
+        order: 1;
+        height: 80%;
+        /* Ocupa el 80% de la altura total */
+    }
+
+    .article {
+        flex: 1 60%;
+        order: 2;
+        height: 80%;
+        /* Ocupa el 80% de la altura total */
+    }
+
+    .aside {
+        flex: 1 15%;
+        order: 3;
+        height: 80%;
+        /* Ocupa el 80% de la altura total */
+    }
+
+    .footer {
+        flex: 1 100%;
+        order: 4;
+        height: 10%;
+        /* Ocupa el 10% de la altura total */
+    }
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 639px) {
+
+    .header,
+    .nav,
+    .article,
+    .aside,
+    .footer {
+        flex: 1 100%;
+        height: auto;
+        /* Altura automática para pantallas pequeñas */
+    }
+
+    .nav {
+        order: 2;
+    }
+
+    .article {
+        order: 1;
+    }
+
+    .aside {
+        order: 3;
+    }
+
+    .footer {
+        order: 4;
+    }
+}
