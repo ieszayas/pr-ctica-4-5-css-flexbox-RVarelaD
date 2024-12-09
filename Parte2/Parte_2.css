@@ -1,0 +1,82 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Fondo oscuro */
+    color: #ffffff; /* Texto blanco */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    border-bottom: 2px solid #444;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;
+}
+
+.gallery img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Tamaño máximo para las imágenes */
+.gallery img {
+    max-width: 300px; /* Ajusta el tamaño máximo de las imágenes */
+    width: 100%; /* Asegura que la imagen ocupe el espacio disponible */
+    height: auto; /* Mantiene la proporción de aspecto */
+    margin: 5px;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+/* Estilos para diferentes tamaños de pantalla */
+
+/* Pantalla panorámica (más de 1200px) */
+@media (min-width: 1300px) {
+    .gallery img {
+        flex: 1 1 calc(25% - 20px); /* 4 imágenes por fila */
+    }
+}
+
+/* Escritorio (entre 900 y 1299px) */
+@media (min-width: 1000px) and (max-width: 1299px) {
+    .gallery img {
+        flex: 1 1 calc(33.33% - 20px); /* 3 imágenes por fila */
+    }
+}
+
+/* Tableta (entre 550px y 899px) */
+@media (min-width: 750px) and (max-width: 999px) {
+    .gallery img {
+        flex: 1 1 calc(50% - 20px); /* 2 imágenes por fila */
+    }
+}
+
+/* Móvil (menos de 550px) */
+@media (max-width: 749px) {
+    .gallery img {
+        flex: 1 1 100%; /* 1 imagen por fila */
+    }
+}
