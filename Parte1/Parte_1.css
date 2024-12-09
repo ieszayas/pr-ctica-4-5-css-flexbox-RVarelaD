@@ -10,8 +10,10 @@ body {
     display: flex;
     flex-wrap: wrap;
     margin: 10px;
+    padding: 2px;
     border: 1px solid #ccc;
     height: calc(100vh - 20px);
+    border-radius: 10px;
     /* Asegura que el contenedor ocupe toda la altura de la ventana, menos el margen */
 }
 
@@ -21,9 +23,9 @@ article,
 aside,
 footer {
     padding: 20px;
-    border: 1px solid #ccc;
     box-sizing: border-box;
     margin: 5px;
+    border-radius: 10px;
 }
 
 
@@ -68,34 +70,35 @@ footer {
 @media (min-width: 640px) {
     .header {
         flex: 1 100%;
+        order: 1;
         height: 10%;
         /* Ocupa el 10% de la altura total */
     }
 
     .nav {
         flex: 1 15%;
-        order: 1;
-        height: 80%;
+        order: 2;
+        height: 75%;
         /* Ocupa el 80% de la altura total */
     }
 
     .article {
         flex: 1 60%;
-        order: 2;
-        height: 80%;
+        order: 3;
+        height: 75%;
         /* Ocupa el 80% de la altura total */
     }
 
     .aside {
         flex: 1 15%;
-        order: 3;
-        height: 80%;
+        order: 4;
+        height: 75%;
         /* Ocupa el 80% de la altura total */
     }
 
     .footer {
         flex: 1 100%;
-        order: 4;
+        order: 5;
         height: 10%;
         /* Ocupa el 10% de la altura total */
     }
@@ -104,29 +107,33 @@ footer {
 /* Estilos para pantallas pequeñas */
 @media (max-width: 639px) {
 
-    .header,
-    .nav,
-    .article,
-    .aside,
-    .footer {
+    .header{
         flex: 1 100%;
-        height: auto;
-        /* Altura automática para pantallas pequeñas */
+        order: 1;
+        height: 10%;
     }
 
     .nav {
+        flex: 1 100%;
         order: 2;
+        height: 10%;
     }
 
     .article {
-        order: 1;
+        flex: 1 100%;
+        order: 3;
+        height: 40%;
     }
 
     .aside {
-        order: 3;
+        flex: 1 100%;
+        order: 4;
+        height: 10%;
     }
 
     .footer {
-        order: 4;
+        flex: 1 100%;
+        order: 5;
+        height: 10%;
     }
 }
