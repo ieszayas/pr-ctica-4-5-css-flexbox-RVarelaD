@@ -2,8 +2,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #121211; /* Fondo oscuro */
-    color: #ffffff; /* Texto blanco */
+    color: #ffffff; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,23 +32,19 @@ h1 {
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Tamaño máximo para las imágenes */
 .gallery img {
     max-width: 300px; /* Ajusta el tamaño máximo de las imágenes */
-    width: 100%; /* Asegura que la imagen ocupe el espacio disponible */
+    width: 100%; 
     height: auto; /* Mantiene la proporción de aspecto */
     margin: 5px;
 }
 
 .gallery img:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /*Amplía la imagen un 5% al pasar el cursor.*/
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
 }
-
-/* Estilos para diferentes tamaños de pantalla */
 
 /* Pantalla panorámica (más de 1300px) */
 @media (min-width: 1300px) {
@@ -57,9 +52,14 @@ h1 {
         flex: 1 1 calc(25% - 20px); /* 4 imágenes por fila */
         margin: 15px; /* Ajusta el espacio entre las imágenes */
     }
+
     h1 {
         font-size: 2.5rem; /* Aumenta el tamaño del título */
         padding: 20px 0; /* Ajusta el padding del título */
+    }
+
+    body{
+        background-color: rgba(22, 22, 22, 0.759);
     }
 }
 
@@ -68,38 +68,49 @@ h1 {
     .gallery img {
         flex: 1 1 calc(33.33% - 20px); /* 3 imágenes por fila */
         margin: 10px; /* Ajusta el espacio entre las imágenes */
-        max-width: 90%;
-        height: auto;
     }
+
     h1 {
         font-size: 2rem; /* Tamaño del título más pequeño */
         padding: 15px 0; /* Ajusta el padding del título */
     }
+
+    body{
+        background-color: rgba(0, 68, 9, 0.742);
+    }
 }
 
-/* Tableta (entre 750px y 999px) */
-@media (min-width: 750px) and (max-width: 999px) {
+/* Tableta (entre 650px y 999px) */
+@media (min-width: 650px) and (max-width: 999px) {
     .gallery img {
         flex: 1 1 calc(50% - 20px); /* 2 imágenes por fila */
         margin: 10px; /* Ajusta el espacio entre las imágenes */
     }
+    
     h1 {
         font-size: 1.8rem; /* Aumenta el tamaño de los títulos */
         padding: 12px 0; /* Ajusta el padding del título */
     }
+    
+    body{
+        background-color: rgba(175, 0, 0, 0.6);
+    }
 }
 
-/* Móvil (menos de 750px) */
-@media (max-width: 749px) {
+/* Móvil (menos de 650px) */
+@media (max-width: 649px) {
     .gallery img {
         flex: 1 1 100%; /* 1 imagen por fila, ocupa todo el ancho */
-        margin: 2px; /* Reducido el espacio entre las imágenes */
+        margin: 5px; /* Reducido el espacio entre las imágenes */
         width: 100%; /* Ocupa el 100% del ancho de la pantalla */
-        max-width: 90%;
-        height: auto;
     }
+    
     h1 {
         font-size: 1.5rem; /* Ajusta el tamaño del título para móviles */
         padding: 8px 0; /* Reducido el padding del título */
+    }
+    
+    body{
+        background-color: rgba(185, 0, 136, 0.477);
     }
 }
